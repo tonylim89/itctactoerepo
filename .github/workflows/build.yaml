@@ -13,8 +13,12 @@ jobs:
       - name: checkout your source
         uses: actions/checkout@v3
 
-      - name: list your repo
-        run: ls -l 
+      - name: list your repo before build
+        run: ls -lR TICTACTOEORI/bin 
       
-      - name: list your repo
+      - name: dotnet build
         run: dotnet build
+
+      - name: list your repo after build
+        run: ls -lR TICTACTOEORI/bin 
+
